@@ -1,0 +1,119 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+img{
+    filter: grayscale(100%); transition: filter .3s ease-in-out;
+}
+
+img:hover {
+     filter: none;
+}
+
+.link-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.rss{
+    justify-content: center;
+    background-color: darkblue;
+    color: white;
+}
+
+.footer{
+    grid-area: footer;
+    justify-content: space-around;
+}
+
+.side-bar{
+    display: flex;
+    grid-area: side-bar;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.products{
+    grid-area: products;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card{
+    width: 100%;
+}
+
+img{
+    width: 100%;
+}
+
+.paginador{
+    justify-content: center;
+    text-align: center;
+}
+
+@media (width <= 576px){
+    body{
+        background-color: aliceblue;
+
+    }
+
+    .main_container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        'side-bar'
+        'products'
+        'footer';
+        
+        .link-container{
+            display: none;
+        }
+        
+    }
+    .menu-hamburguesa{
+        text-align: end;
+    }
+}
+
+@media (width > 576px){
+    body{
+        background-color: aliceblue;
+
+    }
+
+    .main_container{
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        grid-template-areas:
+        'side-bar products'
+        'side-bar products'
+        'footer footer';
+        
+    }
+
+    .card{
+        width: 32%;
+        margin: 10px auto;
+        padding: 2px;
+        margin-bottom: 10px;
+    }
+
+    .card-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .side-bar{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .menu-hamburguesa{
+        display: none;
+    }
+
+}
