@@ -18,7 +18,7 @@ img:hover {
 
 .rss{
     justify-content: center;
-    background-color: darkblue;
+    background-color: black;
     color: white;
 }
 
@@ -50,11 +50,6 @@ img{
     width: 100%;
 }
 
-.paginador{
-    justify-content: center;
-    text-align: center;
-}
-
 @media (width <= 576px){
     body{
         background-color: aliceblue;
@@ -68,20 +63,12 @@ img{
         'side-bar'
         'products'
         'footer';
-        
-        .link-container{
-            display: none;
-        }
-        
-    }
-    .menu-hamburguesa{
-        text-align: end;
     }
 }
 
 @media (width > 576px){
     body{
-        background-color: aliceblue;
+        background-color: white;
 
     }
 
@@ -110,10 +97,6 @@ img{
     .side-bar{
         flex-direction: column;
         justify-content: flex-start;
-    }
-
-    .menu-hamburguesa{
-        display: none;
     }
 
 }
